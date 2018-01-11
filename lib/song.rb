@@ -66,12 +66,12 @@ def self.new_from_filename(song1)
   newSong.artist_name = songArr[0]
   newSong
   #again. new song must be created!
-  #test fails if created song(song1) is not returned
+  #test fails if created song(newSong) is not returned
 end
 
 def self.create_from_filename(newSong)
-  @@all << self.new_from_filename(newSong)
-
+  self.new_from_filename(newSong)
+  self
 end
 
 def self.destroy_all
